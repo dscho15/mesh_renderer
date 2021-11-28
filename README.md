@@ -10,7 +10,7 @@ The project is coded in python and should be extremely portable, but I have only
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* Install the following via pip or any favorite package installer
   ```sh
   pip trimesh
   pip pyrender
