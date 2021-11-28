@@ -1,0 +1,17 @@
+{
+    "lat_begin": 0.0,
+    "lat_end": 360.0,
+    "lon_begin": 0.0,
+    "lon_end": 60.0,
+    "subdivisions": 4,
+    "replace_prev_templates": true,
+    "path2temp": "/../imgs/templates/", 
+    "path2mesh": "/../data/milk.ply",
+    "radius": [0.625, 0.650, 0.675, 0.700, 0.725, 0.750, 0.775],
+    "north_pole": [0.0, 0.0, 1.0],
+    "visualize_frames": false,
+    "img_height": 480,
+    "img_width": 640,
+    "z_near": 0.001,
+    "fov": 74.4845134
+}
