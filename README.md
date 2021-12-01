@@ -51,9 +51,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - (Daniel Tofte Schøn) - danieltoftesch@hotmail.com
+(Daniel Tofte Schøn) - danieltoftesch@hotmail.com
 
-Project Link: [https://github.com/dscho15](https://github.com/dscho15)
+[https://github.com/dscho15](https://github.com/dscho15)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
