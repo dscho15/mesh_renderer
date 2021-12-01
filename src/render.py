@@ -16,7 +16,7 @@ class RenderMesh:
                  fov = 74.4845134,
                  znear = 0.001,
                  color = (1., 1., 1.),
-                 ambient_light=2
+                 ambient_light=8
                  ):
 
         self.fov = np.deg2rad(fov)
@@ -34,7 +34,7 @@ class RenderMesh:
         self.cam = pyrender.PerspectiveCamera(yfov=self.fov, aspectRatio=w/h, znear=znear)
         
         # light
-        self.light_h = self.scene.add(pyrender.DirectionalLight(color=color, intensity=5), cam_pose)
+        self.light_h = self.scene.add(pyrender.DirectionalLight(color=color, intensity=15), cam_pose)
         
         # objects
         self.cam_h = self.scene.add(self.cam, pose=cam_pose)

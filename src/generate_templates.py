@@ -18,7 +18,6 @@ if __name__ == '__main__':
     
     # settings should be located in data
     with open(os.path.dirname(__file__) + '/../data/settings.json', 'r') as read_file:
-        # load the settings
         settings = json.load(read_file)
         lat_begin = settings["lat_begin"]
         lat_end = settings["lat_end"]
@@ -40,7 +39,7 @@ if __name__ == '__main__':
     path = os.path.dirname(__file__) + path2templates
     
     if replace_prev_templates:
-        [os.remove(path+file) for file in os.listdir(path) if file.endswith('.jpg') or file.endswith('.txt')]
+        [os.remove(path+file) for file in os.listdir(path) if file.endswith('.png') or file.endswith('.txt')]
     
     mesh = trimesh.load_mesh(os.path.dirname(__file__) + path2mesh)
     
@@ -65,7 +64,7 @@ if __name__ == '__main__':
         img = rm.render_cam_pov(cam_pose @ cam_opengl_to_cv)
         
         # write to template folder
-        cv2.imwrite(os.path.join(path, 'template' + str(i).zfill(4) + '.jpg'), cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
+        cv2.imwrite(os.path.join(path, 'template' + str(i).zfill(4) + '.png'), cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
         
         # write the pose to folder
         np.savetxt(os.path.join(path, 'template' + str(i).zfill(4) + '_pose.txt'), cam_pose, delimiter = ', ', fmt='%.8f')
