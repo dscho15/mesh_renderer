@@ -26,16 +26,20 @@ class CameraPoseSphere:
         self.lon_begin = np.deg2rad(lon_begin)
         self.lon_end = np.deg2rad(lon_end)
         self.north_pole = np.array(north_pole) / np.linalg.norm(north_pole)
+        
         # gen verticies of a icosphere
         icosphere = np.array(trimesh.creation.icosphere(subdivisions, 1).vertices)
+        
         # we mask by lat/longtitude
         icosphere_pow = icosphere * icosphere
         r = icosphere_pow[:, 0] + icosphere_pow[:, 1]
         lat = np.arctan2(icosphere[:, 1], icosphere[:, 0])
         lat[lat < 0] += 2*np.pi
         lon = np.abs(np.arctan2(icosphere[:, 2], np.sqrt(r)) - np.pi/2)
+        
         # mask
         mask = (self.lat_begin <= lat) & (lat <= self.lat_end) & (self.lon_begin <= lon) & (lon <= self.lon_end)
+        
         # only keep the ones that are needed
         self.vertices = icosphere[mask]
 
